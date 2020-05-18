@@ -45,7 +45,7 @@ The objetive of this research is to implement group pathfinding. To reach this w
 
 ## Have you seen it in games?
 
-## Age of Empires II
+### Age of Empires II
 
 In Age of Empires II, troops move to the position where the player has sent them by using A* algorithm. However, they move in formation and then move as an entity. The formations depend on which units and how many there are. This movement and pathfinding has been upgraded from the original game: a high-level pathfinder computer general routes across the world map, ignoring such trivial things as people walking, which were handled by lower-level pathfinders that could thread a path through a closely packed group of units.
 
@@ -95,6 +95,43 @@ In Age of Empires II, troops move to the position where the player has sent them
 ## Links to documentation
 
 Here are the links and references where I got all the information I used to create this research.
+
+- [Gamasutra: *Coordinated Unit Movement*](https://www.gamasutra.com/view/feature/131720/coordinated_unit_movement.php?page=1)
+- [Gamasutra: *Implementing Coordinateed Movement*](https://www.gamasutra.com/view/feature/131721/implementing_coordinated_movement.php?page=1)
+- [Github repository](https://github.com/Danny0ner/Pathfinding-Optimization) and [web page](https://danny0ner.github.io/Pathfinding-Optimization/) on Pathfinding Optimizations by [Danny0ner](https://github.com/Danny0ner)
+- [Hindawi: *Hierarchical Pathfinding and AI-Based Learning Approach in Strategy Game Design*](https://www.hindawi.com/journals/ijcgt/2008/873913/)
+- [Lazy Foo' Productions: *Circular Collision Detection*](http://lazyfoo.net/tutorials/SDL/29_circular_collision_detection/index.php)
+- [Introduction To Game Studies: *“Age of Empires II: Age of Kings” – Grouping and Formations*](http://blog.ocad.ca/wordpress/vism2b15-fw2011-01/2011/10/%E2%80%9Cage-of-empires-ii-age-of-kings%E2%80%9D-grouping-and-formations/?doing_wp_cron=1489083347.2696259021759033203125)
+- [Gamasutra: *Group Pathfinding & Movement in RTS Style Games*](https://www.gamasutra.com/blogs/AndrewErridge/20180522/318413/Group_Pathfinding__Movement_in_RTS_Style_Games.php)
+- [GDC Vault: *AI Navigation: It's Not a Solved Problem - Yet*](https://www.gdcvault.com/play/1014514/AI-Navigation-It-s-Not)
+- [REYNOLDS engineering & design: *Research*](http://www.red3d.com/research.html)
+- [Red Blob Games: *Introduction to the A* Algorithm*](https://www.redblobgames.com/pathfinding/a-star/introduction.html)
+- [Jeremiah Warm - Game Design: *Coordinated Movement*](http://www.jeremiahwarm.com/coordinated-movement.php)
+- [Crowd Flows](http://grail.cs.washington.edu/projects/crowd-flows/)
+- [Reddit: *How do RTS games such as Starcraft 2 or Warcraft 3 handle multi-unit movement?*](https://www.reddit.com/r/Unity3D/comments/7v62t2/how_do_rts_games_such_as_starcraft_2_or_warcraft/)
+- [Wikipedia: Crowd simulation](https://en.wikipedia.org/wiki/Crowd_simulation)
+- [Game Ai Pro: *Crowd Pathfinding and Steering Using Flow Field Tiles*](http://www.gameaipro.com/GameAIPro/GameAIPro_Chapter23_Crowd_Pathfinding_and_Steering_Using_Flow_Field_Tiles.pdf)
+- [Leif Node: *Flow Field Pathfinding*](https://leifnode.com/2013/12/flow-field-pathfinding/)
+- [How to RTS](https://howtorts.github.io/)
+- [Envato tuts+: *Understanding Steering Behaviors*](https://gamedevelopment.tutsplus.com/series/understanding-steering-behaviors--gamedev-12732)
+- [Journal of Computing and Information Technology: *Path Finding and Collision Avoidance in Crowd Simulation*](https://pdfs.semanticscholar.org/3cb8/5d6c5db83af451637607c01b4c9190decf61.pdf)
+- [Game Ai Pro: *Hierarchical Architecture for Group Navigation Behaviors*](http://www.gameaipro.com/GameAIPro2/GameAIPro2_Chapter20_Hierarchical_Architecture_for_Group_Navigation_Behaviors.pdf)
+- [REYNOLDS engineering & design: *Boids*](https://www.red3d.com/cwr/boids/)
+- [Envato tuts+: *3 Simple Rules of Flocking Behaviors: Alignment, Cohesion, and Separation*](https://gamedevelopment.tutsplus.com/tutorials/3-simple-rules-of-flocking-behaviors-alignment-cohesion-and-separation--gamedev-3444)
+- [TL.net: *The Mechanics of Starcraft 2*](https://tl.net/forum/starcraft-2/132171-the-mechanics-of-sc2-part-1)
+- [Strike Tactics: *Starcraft 1 Pathfinding: A technical analysis*](http://striketactics.net/devblog/starcraft-1-pathfinding-technical-analysis)
+- [Code of Honor: *More Band-Aids: path-finding in StarCraft*](https://www.codeofhonor.com/blog/tough-times-on-the-road-to-starcraft#path-finding)
+- [Code of Honor: *The StarCraft path-finding hack*](https://www.codeofhonor.com/blog/the-starcraft-path-finding-hack)
+- [Gamedev.net: *Formations in RTS (A* pathfinding)*](https://www.gamedev.net/forums/topic/672751-formations-in-rts-a-pathfinding/)
+- [Unity: *Unit local avoidance in RTS type games*](https://answers.unity.com/questions/790857/unit-local-avoidance-in-rts-type-games.html)
+- [*StarCraft Unit Motion: Analysis and Search Enhancements* by Douglas Schneider and Michael Buro (link to download the article)](https://www.aaai.org/ocs/index.php/AIIDE/AIIDE15/paper/download/11573/11384)
+- [Wikipedia: *Boids*](https://en.wikipedia.org/wiki/Boids)
+- [Wikipedia: *Navigation mesh*](https://en.wikipedia.org/wiki/Navigation_mesh)
+- [Rich Geldreich's Tech Blog: *On Age DE's pathing/movement*](http://richg42.blogspot.com/2018/02/on-age-des-pathingmovement.html)
+- [ResearchGate: *Flocking behaviour of group movement in real strategy games*](https://www.researchgate.net/publication/282379016_Flocking_behaviour_of_group_movement_in_real_strategy_games)
+- [O'Reilly: *Chapter 4. Flocking*](https://www.oreilly.com/library/view/ai-for-game/0596005555/ch04.html)
+- [*Visibility graphs* by Haarika Koneru (presentation)](http://www.cs.kent.edu/~dragan/ST-Spring2016/visibility%20graphs.pdf)
+- [Warhammer Guide: *Dawn of War: Stances*](http://warhammer-guide.ru/wiki/Dawn_of_War_Stances.html)
 
 Other Researches:
 
