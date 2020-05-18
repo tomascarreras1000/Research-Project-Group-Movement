@@ -2,9 +2,9 @@
 
 ## Small summary
 
-[The web page]() and the [GitHub repository](https://github.com/tomascarreras1000/Research-Project-Group-Movement) where it is created from are dedicated to how to generate Group Movement for an RTS game.
+[The web page](https://tomascarreras1000.github.io/Research-Project-Group-Movement/) and the [GitHub repository](https://github.com/tomascarreras1000/Research-Project-Group-Movement) where it is created from are dedicated to how to generate Group Movement for an RTS game.
 
-###### For the full research, please take a look at the [web page]().
+###### For the full research, please take a look at the [web page](https://tomascarreras1000.github.io/Research-Project-Group-Movement/).
 
 
 ## About the Author
