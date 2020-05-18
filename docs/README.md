@@ -31,12 +31,18 @@ I am [Tomás Carreras](https://www.linkedin.com/in/tom%C3%A1s-carreras-a96a99177
 
 ## What should you know about *Group Movement* before starting?
 
+### Introduction
 
+In games you usually have to control a unit, being a single character or multiple units, which means they have to moe from point A to point B. In the case of RTS games, you have to move one or more units, which may be the same or different ones, across the map. Every unit has to react to other units, buildings, enemies, resources, etc. in order to move coherently and at the same time follow the player's orders. However, there may be some problems we have to be aware of, like units overlapping or pathfinding algorithms. These problems can have different approaches, which will be dealt with later in this research, what methods are popular in different games and we will genereate our own code so we can develop a group movement which can be applied to an RTS game.
 
 ***
 
 
 ## Have you seen it in games?
+
+## Age of Empires II
+
+In Age of Empires II, troops move to the position where the player has sent them by using A* algorithm. However, they move in formation and then move as an entity. The formations depend on which units and how many there are. This movement and pathfinding has been upgraded from the original game: a high-level pathfinder computer general routes across the world map, ignoring such trivial things as people walking, which were handled by lower-level pathfinders that could thread a path through a closely packed group of units.
 
 
 ***
