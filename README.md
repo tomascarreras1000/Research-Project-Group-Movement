@@ -13,5 +13,4 @@ I am [Tomás Carreras](https://www.linkedin.com/in/tom%C3%A1s-carreras-a96a99177
 
 ## Relevant Links
 
-+ [Links to documentation in the web page]()
-+ [Further information in the web page]()
++ [Links to documentation in the web page](https://tomascarreras1000.github.io/Research-Project-Group-Movement/#links-to-documentation)
