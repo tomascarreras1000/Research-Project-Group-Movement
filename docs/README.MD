@@ -1,7 +1,7 @@
 # Personal Research: Group Movement
 
 
-[The web page]() and the [GitHub repository](https://github.com/tomascarreras1000/Research-Project-Group-Movement) where it is created from are dedicated to how to generate Group Movement for an RTS game.
+[The web page](https://tomascarreras1000.github.io/Research-Project-Group-Movement/) and the [GitHub repository](https://github.com/tomascarreras1000/Research-Project-Group-Movement) where it is created from are dedicated to how to generate Group Movement for an RTS game.
 
 ***
 
@@ -65,11 +65,11 @@ I am [Tomás Carreras](https://www.linkedin.com/in/tom%C3%A1s-carreras-a96a99177
 ### Where can you find the exercise?
 
 
-[Here you can find the link to the exercise]()
+[Here you can find the link to the exercise](https://github.com/tomascarreras1000/Research-Project-Group-Movement/tree/master/exercices/handout)
 
-[Here you can find the final result]()
+[Here you can find the final result](https://github.com/tomascarreras1000/Research-Project-Group-Movement/tree/master/exercices/solution)
 
-[Here you can find the solution]()
+[Here you can find the solution](https://github.com/tomascarreras1000/Research-Project-Group-Movement/tree/master/full_code)
 
 
 ***
@@ -102,10 +102,4 @@ Other Researches:
 - Group Movement by Yessica Servin
      - [GitHub repository](https://github.com/YessicaSD/CITM_2_Research_GroupMovement)
      - [Web page](https://yessicasd.github.io/CITM_2_Research_GroupMovement/)
-
-
-
-
-
-
 
