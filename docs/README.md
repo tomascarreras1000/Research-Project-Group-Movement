@@ -95,13 +95,30 @@ In group movement we could have 3 different approaches:
 
 However, all of them refer to the same concept: **Steering behaviour**. In 1986 a computer model was developed to simulate coordinated animal motion, such as the movement of bird flocks. 
 
-I will also introduce the concept of *Boids*, which is this  artificial life program that simulates the flocking behaviour of birds and is the short version of "bord-oid object". The rules applied in the simplest Boids world are as follows:
+### Steering
 
- - **Separation:** steer to avoid crowding local flockmates
- - **Aalignment:** steer towards the average heading of local flockmates
- - **Cohesion:** steer to move towards the average position (center of mass) of local flockmates
+When talking about steering, it is important to also introduce the concept of *Boids*, which is this  artificial life program that simulates the flocking behaviour of birds and is the short version of "bord-oid object". The rules applied in the simplest Boids world are as follows:
+
+ - **Separation:** steer to avoid crowding local flockmates.
+ 
+ 
+ 
+ - **Aalignment:** steer towards the average heading of local flockmates.
+ 
+ 
+ 
+ - **Cohesion:** steer to move towards the average position (center of mass) of local flockmates.
+ 
+ 
+ 
  
 More complex rules can be added, such as obstacle avoidance and goal seeking.
+
+The boids also have a region on which they are influenced by neighboring boids, this region is defined by an angle and distance, building a spherical field around each boid.
+
+[IMAGE]()
+
+To summarize, this concept could be defined as a set of rules that regulate the relationship between individuals of a group.
 
 ***
 
