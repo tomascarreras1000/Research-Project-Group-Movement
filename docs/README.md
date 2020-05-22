@@ -107,7 +107,7 @@ When talking about steering, it is important to also introduce the concept of *B
  
  ![Rule_separation](https://user-images.githubusercontent.com/45202069/82712602-a66f0380-9c88-11ea-9e9b-c83ade043935.png)
  
- - **Aalignment:** steer towards the average heading of local flockmates.
+ - **Alignment:** steer towards the average heading of local flockmates.
  
  ![Rule_alignment](https://user-images.githubusercontent.com/45202069/82712605-a66f0380-9c88-11ea-9592-ff3bb067d341.png)
  
@@ -125,7 +125,7 @@ To summarize, this concept could be defined as a set of rules that regulate the 
 
 #### Behaviours
 
-As said by Craig Reynolds himself, we can set mmany differen rules to keep our units moving in a structured way:
+As said by Craig Reynolds himself, we can set many different rules to keep our units moving in a structured way:
 
  - Simple behaviors for individuals and pairs:
    + Seek and Flee
