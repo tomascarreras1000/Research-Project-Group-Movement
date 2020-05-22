@@ -155,27 +155,14 @@ As said by Craig Reynolds himself, we can set mmany differen rules to keep our u
 
 ## How can YOU do it?
 
-### What will the TODOs (exercises) teach you *TODO*?
-
-### What do you have *TODO*?
-
-### How is it done?
-
-### Where can you find the exercise?
-
-
-[Here you can find the link to the exercise](https://github.com/tomascarreras1000/Research-Project-Group-Movement/tree/master/exercices/handout)
-
-[Here you can find the final result](https://github.com/tomascarreras1000/Research-Project-Group-Movement/tree/master/exercices/solution)
-
-[Here you can find the solution](https://github.com/tomascarreras1000/Research-Project-Group-Movement/tree/master/full_code)
-
+*UNDER CONSTRUCTION*
 
 ***
 
 
 ## How can you continue improving?
 
+*UNDER CONSTRUCTION*
 
 ***
 
