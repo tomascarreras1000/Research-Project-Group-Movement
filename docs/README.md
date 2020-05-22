@@ -142,6 +142,17 @@ As said by Craig Reynolds himself, we can set mmany differen rules to keep our u
    + Unaligned Collision Avoidance
    + Queuing (at a doorway)
    + Flocking (combining: separation, alignment, cohesion)
+   
+However, as you can see, this by itself could be a single topic, so I won't spend a lot of time on it: explaining each behaviour would be too much information for the scope of this project. But I recommend checking out the following [link](https://gamedevelopment.tutsplus.com/tutorials/understanding-steering-behaviors-leader-following--gamedev-10810) on the topic.
+
+### Pathfinding
+
+#### A*
+
+Many games use as a baseline for pathfinding implementations A*, a tile-based algorithm. These games did not have to deal with as many individuals as later sequels and new ips, so it was not much of a problem.
+
+#### Flow Field
+
 
 
 ***
