@@ -47,7 +47,10 @@ The objetive of this research is to implement group pathfinding. To reach this w
 
 ### Age of Empires II
 
-In Age of Empires II, troops move to the position where the player has sent them by using A* algorithm. However, they move in formation and then move as an entity. The formations depend on which units and how many there are. This movement and pathfinding has been upgraded from the original game: a high-level pathfinder computer general routes across the world map, ignoring such trivial things as people walking, which were handled by lower-level pathfinders that could thread a path through a closely packed group of units.
+In Age of Empires II, troops move to the position where the player has sent them by using A* algorithm. However, this movement depends of various factors, such as the number of units, the type of units, and (for some of them) the formation selected.
+The moving function isn't exactly alike for all units: military units form up in a group in the formation the player specifies and, once in formation, they will move to their destination, unlike the villagers who just go to where they were sent to.
+The speed of the group is also something that can vary depending on the speed of the individual units on the group (a group will move slower if it contains an elephant due to this unit's slow movement speed). Units avoid buildings and other obstacles but they can collide with other units, at least during a movement, not at the end of it.
+
 
 
 ***
