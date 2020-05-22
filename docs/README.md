@@ -39,10 +39,6 @@ In games you usually have to control a unit, being a single character or multipl
 
 The objetive of this research is to implement group pathfinding. To reach this we'll analyse different group movement implented in RTS games and decide which one would work best for us and work around it. 
 
-### Documentation
-
-As we implied in the introduction, moving troops in groups can be a real challenge challenge, and many games have to deal with it, specially in RTS, where there are many units that may have the same destination or that have to re-calculate this destination midways. Then, how do we make units cooperate with each other so they move coherently? The answer, of course, is pathfinding. Pathfinding is the technique of finding the best path from point A to point B. If we implement it correctly, together with individual unit movement and their behaviours related with the other entities, we can achive a good, coordinated group movement.
-
 
 ***
 
@@ -60,6 +56,10 @@ The speed of the group is also something that can vary depending on the speed of
 ***
 
 ## What is the approach to this problem in this research?
+
+### First Idea
+
+As we implied in the introduction, moving troops in groups can be a real challenge challenge, and many games have to deal with it, specially in RTS, where there are many units that may have the same destination or that have to re-calculate this destination midways. Then, how do we make units cooperate with each other so they move coherently? The answer, of course, is pathfinding. Pathfinding is the technique of finding the best path from point A to point B. If we implement it correctly, together with individual unit movement and their behaviours related with the other entities, we can achive a good, coordinated group movement.
 
 
 
