@@ -95,17 +95,81 @@ In group movement we could have 3 different approaches:
 
 However, all of them refer to the same concept: **Steering behaviour**. In 1986 a computer model was developed to simulate coordinated animal motion, such as the movement of bird flocks. 
 
-I will also introduce the concept of *Boids*, which is this  artificial life program that simulates the flocking behaviour of birds and is the short version of "bord-oid object". The rules applied in the simplest Boids world are as follows:
+### Steering
 
- - **Separation:** steer to avoid crowding local flockmates
- - **Aalignment:** steer towards the average heading of local flockmates
- - **Cohesion:** steer to move towards the average position (center of mass) of local flockmates
+First, it is important to give credit to the developer of this idea, Craig Reynolds, a software engineer,expert in artificial life and computer graphics. You can check his web page [here](https://www.red3d.com/cwr/).
+
+When talking about steering, it is important to also introduce the concept of *Boids*, which is this  artificial life program that simulates the flocking behaviour of birds and is the short version of "bord-oid object". The rules applied in the simplest Boids world are as follows:
+
+ - **Separation:** steer to avoid crowding local flockmates.
+ 
+ ![Rule_separation](https://user-images.githubusercontent.com/45202069/82712602-a66f0380-9c88-11ea-9e9b-c83ade043935.png)
+ 
+ - **Aalignment:** steer towards the average heading of local flockmates.
+ 
+ ![Rule_alignment](https://user-images.githubusercontent.com/45202069/82712605-a66f0380-9c88-11ea-9592-ff3bb067d341.png)
+ 
+ - **Cohesion:** steer to move towards the average position (center of mass) of local flockmates.
+ 
+ ![Rule_cohesion](https://user-images.githubusercontent.com/45202069/82712606-a7079a00-9c88-11ea-8d21-c3e989a0ae07.png)
  
 More complex rules can be added, such as obstacle avoidance and goal seeking.
+
+The boids also have a region on which they are influenced by neighboring boids, this region is defined by an angle and distance, building a spherical field around each boid.
+
+![boid](https://user-images.githubusercontent.com/45202069/82712764-13829900-9c89-11ea-8377-15c1bd051084.png)
+
+To summarize, this concept could be defined as a set of rules that regulate the relationship between individuals of a group.
+
+#### Behaviours
+
+As said by Craig Reynolds himself, we can set mmany differen rules to keep our units moving in a structured way:
+
+ - Simple behaviors for individuals and pairs:
+   + Seek and Flee
+   + Pursue and Evade
+   + Wander
+   + Arrival
+   + Obstacle Avoidance
+   + Containment 
+   + Wall Following
+   + Path Following
+   + Flow Field Following
+   
+ - Combined behaviors and groups:
+   + Crowd Path Following
+   + Leader Following
+   + Unaligned Collision Avoidance
+   + Queuing (at a doorway)
+   + Flocking (combining: separation, alignment, cohesion)
+   
+However, as you can see, this by itself could be a single topic, so I won't spend a lot of time on it: explaining each behaviour would be too much information for the scope of this project. But I recommend checking out the following [link](https://gamedevelopment.tutsplus.com/tutorials/understanding-steering-behaviors-leader-following--gamedev-10810) on the topic.
+
+### Pathfinding
+
+#### A*
+
+Many games use as a baseline for pathfinding implementations A*, a tile-based algorithm. These games did not have to deal with as many individuals as later sequels and new ips, so it was not much of a problem.
+
+#### Flow Field
+
+Flow Fields are an alternate way of doing pathfinding which works better for larger groups of units. A Flow Field is a grid where each grid square has a directional vector. This vector should be pointed in the direction of the most efficient way to get to the destination, while avoiding static obstacles.
+
+#### Navigation Mesh
+
+Pathfinding algorithms work with graphs. If you have a graph of an immense number of small tiles and you issue an A* path you will have some serious performance problems. A key to most pathfinding implementations is to use a customized Navigation Mesh, which means a custom graph. Instead of having the regular tiles defined by the map, you can divide the map in zones, polygons or bigger tiles. Then, when issuing an A* request, the algorithm only navigates a few tiles instead of thousands, significantly improving performance. SC2 uses a navigation mesh and has a hierarchical division of the graph: it runs A* through the highest level (less nodes), traveling through tile “portals” and then issues a flow field request for the ones needed. 
+
+### Performance
+
+CPU is not affected by moving a single unit, but the movement of multiple units needs to be extremely conservative in its CPU usage. This is why, before making any decision that may affect the performance of the system, we need to prioritize. What is more important, minimize CPU usage or maximize the intelligence behind the movement? So, for example, when a unit needs to find a new, valid tile to move to, the possible, valid tiles are checked taking in account its priority. We could calculate this **priority as the number of waypoints that the new path would have** (maximize the accuracy behind the movement: the new tile would be the accurest tile that could have been found) or as **the distance from the new tile to the goal tile** (minimize CPU usage: since the unwalkable tiles are ignored, the new tile could be the closest to the goal tile, but not the best option when creating the new path). This would depend on the requirements your game and target device is.
 
 ***
 
 ## Can it be improved?
+
+One of the ways to improve the code is to change A* for a more modern pathfinder. A* is very basic, and has a high impact on performance. Flow Fields is a modern pathfinding tech for large groups of units, used in SC2 for example. So we implementing a solution in this direction would make the code more optimized. Making our pathfinding efficient is key in order to have groups in movement, A* is only to do basic code.
+
+Also, since I have talked about steering behaviours, they would improve the code a lot. If no steering behaviours are used, the movement could be heavily improved when implementing some of them, both in terms of life-like feeling and performance. What if the way we move our groups enables us to only make a single path request? And on the contrary, what if our pathfinding tech enables us to move any number of units with the behaviours we want? As you can see, we can improve on A to improve B, and the other way too.
 
 
 
@@ -114,27 +178,14 @@ More complex rules can be added, such as obstacle avoidance and goal seeking.
 
 ## How can YOU do it?
 
-### What will the TODOs (exercises) teach you *TODO*?
-
-### What do you have *TODO*?
-
-### How is it done?
-
-### Where can you find the exercise?
-
-
-[Here you can find the link to the exercise](https://github.com/tomascarreras1000/Research-Project-Group-Movement/tree/master/exercices/handout)
-
-[Here you can find the final result](https://github.com/tomascarreras1000/Research-Project-Group-Movement/tree/master/exercices/solution)
-
-[Here you can find the solution](https://github.com/tomascarreras1000/Research-Project-Group-Movement/tree/master/full_code)
-
+*UNDER CONSTRUCTION*
 
 ***
 
 
 ## How can you continue improving?
 
+*UNDER CONSTRUCTION*
 
 ***
 
