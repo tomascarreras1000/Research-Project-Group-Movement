@@ -97,6 +97,8 @@ However, all of them refer to the same concept: **Steering behaviour**. In 1986 
 
 ### Steering
 
+First, it is important to give credit to the developer of this idea, Craig Reynolds, a software engineer,expert in artificial life and computer graphics. You can check his web page [here](https://www.red3d.com/cwr/).
+
 When talking about steering, it is important to also introduce the concept of *Boids*, which is this  artificial life program that simulates the flocking behaviour of birds and is the short version of "bord-oid object". The rules applied in the simplest Boids world are as follows:
 
  - **Separation:** steer to avoid crowding local flockmates.
@@ -115,9 +117,32 @@ More complex rules can be added, such as obstacle avoidance and goal seeking.
 
 The boids also have a region on which they are influenced by neighboring boids, this region is defined by an angle and distance, building a spherical field around each boid.
 
-[IMAGE]()
+![boid](https://user-images.githubusercontent.com/45202069/82712764-13829900-9c89-11ea-8377-15c1bd051084.png)
 
 To summarize, this concept could be defined as a set of rules that regulate the relationship between individuals of a group.
+
+#### Behaviours
+
+As said by Craig Reynolds himself, we can set mmany differen rules to keep our units moving in a structured way:
+
+ - Simple behaviors for individuals and pairs:
+   + Seek and Flee
+   + Pursue and Evade
+   + Wander
+   + Arrival
+   + Obstacle Avoidance
+   + Containment 
+   + Wall Following
+   + Path Following
+   + Flow Field Following
+   
+ - Combined behaviors and groups:
+   + Crowd Path Following
+   + Leader Following
+   + Unaligned Collision Avoidance
+   + Queuing (at a doorway)
+   + Flocking (combining: separation, alignment, cohesion)
+
 
 ***
 
