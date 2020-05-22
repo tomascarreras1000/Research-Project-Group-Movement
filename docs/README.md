@@ -101,16 +101,15 @@ When talking about steering, it is important to also introduce the concept of *B
 
  - **Separation:** steer to avoid crowding local flockmates.
  
- 
+ ![Rule_separation](https://user-images.githubusercontent.com/45202069/82712602-a66f0380-9c88-11ea-9e9b-c83ade043935.png)
  
  - **Aalignment:** steer towards the average heading of local flockmates.
  
- 
+ ![Rule_alignment](https://user-images.githubusercontent.com/45202069/82712605-a66f0380-9c88-11ea-9592-ff3bb067d341.png)
  
  - **Cohesion:** steer to move towards the average position (center of mass) of local flockmates.
  
- 
- 
+ ![Rule_cohesion](https://user-images.githubusercontent.com/45202069/82712606-a7079a00-9c88-11ea-8d21-c3e989a0ae07.png)
  
 More complex rules can be added, such as obstacle avoidance and goal seeking.
 
