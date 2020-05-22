@@ -47,15 +47,21 @@ The objetive of this research is to implement group pathfinding. To reach this w
 
 ### Age of Empires II
 
+[IMAGE](https://www.youtube.com/watch?v=tbqvXp5WRdE)
+
 In Age of Empires II, troops move to the position where the player has sent them by using A* algorithm. However, this movement depends of various factors, such as the number of units, the type of units, and (for some of them) the formation selected.
 The moving function isn't exactly alike for all units: military units form up in a group in the formation the player specifies and, once in formation, they will move to their destination, unlike the villagers who just go to where they were sent to.
 The speed of the group is also something that can vary depending on the speed of the individual units on the group (a group will move slower if it contains an elephant due to this unit's slow movement speed). Units avoid buildings and other obstacles but they can collide with other units, at least during a movement, not at the end of it.
 
-### Starcraft II
+### StarCraft and StarCraft II
 
 [Imagen](https://www.youtube.com/watch?v=0oJPPCaQeD4)
 
+In StarCraft, units constantly check whether they can advance through their path, if at some point they can't, after a while it will recalculate a new path having in mind the where it got stuck last time and avoiding that.
 
+[IMAGE](https://www.youtube.com/watch?v=vgkCx-1VUtU)
+
+In StarCraft II, the units will collide with each other preventing overlapping and will each go to the specified location.
 
 ***
 
