@@ -63,7 +63,9 @@ As we implied in the introduction, moving troops in groups can be a real challen
 
 ### Movement
 
-First we need to get a unit from A to B when ordered to do so. Pathfinding, as said before, enables us to calculate it. We will use a tile-based greedy algorithm: A*. 
+First we need to get a unit from A to B when ordered to do so. Pathfinding, as said before, enables us to calculate it. We will use a tile-based greedy algorithm: A*. We will use a basic implementation of it.
+
+A* gives us a path from A to B, but it takes a good amount of time for it to retrieve this path. When dealing with only one unit is not a problem, but as we icrease the number of entities, it becomes more complex, and it may take too much time.
 
 ### Group Movement
 
