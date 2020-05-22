@@ -51,6 +51,10 @@ In Age of Empires II, troops move to the position where the player has sent them
 The moving function isn't exactly alike for all units: military units form up in a group in the formation the player specifies and, once in formation, they will move to their destination, unlike the villagers who just go to where they were sent to.
 The speed of the group is also something that can vary depending on the speed of the individual units on the group (a group will move slower if it contains an elephant due to this unit's slow movement speed). Units avoid buildings and other obstacles but they can collide with other units, at least during a movement, not at the end of it.
 
+### Starcraft II
+
+[Imagen](https://www.youtube.com/watch?v=0oJPPCaQeD4)
+
 
 
 ***
@@ -65,7 +69,7 @@ As we implied in the introduction, moving troops in groups can be a real challen
 
 First we need to get a unit from A to B when ordered to do so. Pathfinding, as said before, enables us to calculate it. We will use a tile-based greedy algorithm: A*. We will use a basic implementation of it.
 
-A* gives us a path from A to B, but it takes a good amount of time for it to retrieve this path. When dealing with only one unit is not a problem, but as we icrease the number of entities, it becomes more complex, and it may take too much time.
+A* gives us a path from A to B, but it takes a good amount of time for it to retrieve this path. When dealing with only one unit is not a problem, but as we icrease the number of entities, it becomes more complex, and it may take too much time. Therefore, we would need some optimizations to reduce the CPU load. However, due to the scope of this research and it is not the main topic, I will not go into detail. Just be aware that this is a problem you may have.
 
 ### Group Movement
 
