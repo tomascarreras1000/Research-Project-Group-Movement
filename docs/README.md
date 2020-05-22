@@ -148,6 +148,10 @@ As said by Craig Reynolds himself, we can set mmany differen rules to keep our u
 
 ## Can it be improved?
 
+One of the ways to improve the code is to change A* for a more modern pathfinder. A* is very basic, and has a high impact on performance. Flow Fields is a modern pathfinding tech for large groups of units, used in SC2 for example. So we implementing a solution in this direction would make the code more optimized. Making our pathfinding efficient is key in order to have groups in movement, A* is only to do basic code.
+
+Also, since I have talked about steering behaviours, they would improve the code a lot. If no steering behaviours are used, the movement could be heavily improved when implementing some of them, both in terms of life-like feeling and performance. What if the way we move our groups enables us to only make a single path request? And on the contrary, what if our pathfinding tech enables us to move any number of units with the behaviours we want? As you can see, we can improve on A to improve B, and the other way too.
+
 
 
 ***
