@@ -153,7 +153,13 @@ Many games use as a baseline for pathfinding implementations A*, a tile-based al
 
 #### Flow Field
 
+Flow Fields are an alternate way of doing pathfinding which works better for larger groups of units. A Flow Field is a grid where each grid square has a directional vector. This vector should be pointed in the direction of the most efficient way to get to the destination, while avoiding static obstacles.
 
+#### Navigation Mesh
+
+### Performance
+
+CPU is not affected by moving a single unit, but the movement of multiple units needs to be extremely conservative in its CPU usage. This is why, before making any decision that may affect the performance of the system, we need to prioritize. What is more important, minimize CPU usage or maximize the intelligence behind the movement? So, for example, when a unit needs to find a new, valid tile to move to, the possible, valid tiles are checked taking in account its priority. We could calculate this **priority as the number of waypoints that the new path would have** (maximize the accuracy behind the movement: the new tile would be the accurest tile that could have been found) or as **the distance from the new tile to the goal tile** (minimize CPU usage: since the unwalkable tiles are ignored, the new tile could be the closest to the goal tile, but not the best option when creating the new path). This would depend on the requirements your game and target device is.
 
 ***
 
