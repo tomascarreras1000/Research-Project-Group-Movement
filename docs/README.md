@@ -165,6 +165,12 @@ Pathfinding algorithms work with graphs. If you have a graph of an immense numbe
 
 CPU is not affected by moving a single unit, but the movement of multiple units needs to be extremely conservative in its CPU usage. This is why, before making any decision that may affect the performance of the system, we need to prioritize. What is more important, minimize CPU usage or maximize the intelligence behind the movement? So, for example, when a unit needs to find a new, valid tile to move to, the possible, valid tiles are checked taking in account its priority. We could calculate this **priority as the number of waypoints that the new path would have** (maximize the accuracy behind the movement: the new tile would be the accurest tile that could have been found) or as **the distance from the new tile to the goal tile** (minimize CPU usage: since the unwalkable tiles are ignored, the new tile could be the closest to the goal tile, but not the best option when creating the new path). This would depend on the requirements your game and target device is.
 
+### Collisions
+
+To prevent overlaps, we need to take into account the Collision System. To prevent entitites from colliding, we are going to not let them collide in the first place. To do this before they start moving we are going to consider all units, their state, and their move. We are going to identify which kind of collision the unity is going to have so we can prevent it.
+
+The A* algorithm takes into account only static obstacles. This means that dynamic obstacles like units are ignored when calculating the path. Then, it is our job to make units avoid other units  and other dynamic obstacles.As said before, this is achieved with the Collision System, which is made of two smaller systems, the Collision Prediction System (which is run first) and the Collision Avoidance Sytem (which is run only if the Collision Prediction System determines a collision). The Collision System checks for future collisions (opposed to immediate collisions), which are collisions happening at a specific point in the future. It finds out if two units will collide and treats the collision adequately. If all of the future collisions are treated, the risk for immediate collisions is zero.
+
 ***
 
 ## Can it be improved?
