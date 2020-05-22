@@ -47,7 +47,7 @@ The objetive of this research is to implement group pathfinding. To reach this w
 
 ### Age of Empires II
 
-[IMAGE](https://www.youtube.com/watch?v=tbqvXp5WRdE)
+[![Age_of_Empires](https://user-images.githubusercontent.com/45202069/82712049-6d825f00-9c87-11ea-8071-9fe832140cfe.png)](https://www.youtube.com/watch?v=tbqvXp5WRdE)
 
 In Age of Empires II, troops move to the position where the player has sent them by using A* algorithm. However, this movement depends of various factors, such as the number of units, the type of units, and (for some of them) the formation selected.
 The moving function isn't exactly alike for all units: military units form up in a group in the formation the player specifies and, once in formation, they will move to their destination, unlike the villagers who just go to where they were sent to.
@@ -55,11 +55,11 @@ The speed of the group is also something that can vary depending on the speed of
 
 ### StarCraft and StarCraft II
 
-[Imagen](https://www.youtube.com/watch?v=0oJPPCaQeD4)
+[![StarCraft](https://user-images.githubusercontent.com/45202069/82712051-6fe4b900-9c87-11ea-8160-50bfe2efb1a8.png)](https://www.youtube.com/watch?v=0oJPPCaQeD4)
 
 In StarCraft, units constantly check whether they can advance through their path, if at some point they can't, after a while it will recalculate a new path having in mind the where it got stuck last time and avoiding that.
 
-[IMAGE](https://www.youtube.com/watch?v=vgkCx-1VUtU)
+[![StarCraft_II](https://user-images.githubusercontent.com/45202069/82712054-707d4f80-9c87-11ea-98e4-75c5b90fc562.png)](https://www.youtube.com/watch?v=vgkCx-1VUtU)
 
 In StarCraft II, the units will collide with each other preventing overlapping and will each go to the specified location.
 
@@ -83,6 +83,25 @@ When we move a single unit, we just have to give this entity the order of moving
 
 So a simple approach to group momevemnt is to select all the entities and then calculate how to get from A to B for the first one in the list. The others, however, will take into account that this spot has already been taken and will get as their destiny a surrounding tile, if walkable. And like this from this unit onwards. This will be done using pathfinding. This will keep the group together, with the same destination, but without overlaps in the end so the player can continue treating them as individuals.
 
+### Approach
+
+Now that we have a basic idea of the most important concepts, we are going to look deeply into the matter of discussion.
+
+In group movement we could have 3 different approaches:
+
+ - **Flow-based:** The crowd as a whole is the main focus, not each unit. Individuals are equal and behavioural factors are heavily reduced.
+ - **Entity-based:** Every movement is determined by some global laws, which are enforced to the individuals of the group.
+ - **Agent-based:** Autonomous intelligent individuals. Action-reaction is local to each individual based on a set of rules.
+
+However, all of them refer to the same concept: **Steering behaviour**. In 1986 a computer model was developed to simulate coordinated animal motion, such as the movement of bird flocks. 
+
+I will also introduce the concept of *Boids*, which is this  artificial life program that simulates the flocking behaviour of birds and is the short version of "bord-oid object". The rules applied in the simplest Boids world are as follows:
+
+ - **Separation:** steer to avoid crowding local flockmates
+ - **Aalignment:** steer towards the average heading of local flockmates
+ - **Cohesion:** steer to move towards the average position (center of mass) of local flockmates
+ 
+More complex rules can be added, such as obstacle avoidance and goal seeking.
 
 ***
 
