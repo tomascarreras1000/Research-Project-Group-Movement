@@ -71,6 +71,8 @@ In StarCraft II, the units will collide with each other preventing overlapping a
 
 As we implied in the introduction, moving troops in groups can be a real challenge challenge, and many games have to deal with it, specially in RTS, where there are many units that may have the same destination or that have to re-calculate this destination midways. Then, how do we make units cooperate with each other so they move coherently? The answer, of course, is pathfinding. Pathfinding is the technique of finding the best path from point A to point B. If we implement it correctly, together with individual unit movement and their behaviours related with the other entities, we can achive a good, coordinated group movement.
 
+Another approach would be to have a destination for all the entities selected, but respecting the original dstance between them. So what we are going to do is determine an offset to the goal so every entity got its own goal. This offset is calculated with the start position of every unit. We find the middle center between entities and translate this point to the destination and place entities respecting the original distance between this one and the middle point.
+
 ### Movement
 
 First we need to get a unit from A to B when ordered to do so. Pathfinding, as said before, enables us to calculate it. We will use a tile-based greedy algorithm: A*. We will use a basic implementation of it.
