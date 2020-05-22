@@ -61,6 +61,15 @@ The speed of the group is also something that can vary depending on the speed of
 
 As we implied in the introduction, moving troops in groups can be a real challenge challenge, and many games have to deal with it, specially in RTS, where there are many units that may have the same destination or that have to re-calculate this destination midways. Then, how do we make units cooperate with each other so they move coherently? The answer, of course, is pathfinding. Pathfinding is the technique of finding the best path from point A to point B. If we implement it correctly, together with individual unit movement and their behaviours related with the other entities, we can achive a good, coordinated group movement.
 
+### Movement
+
+First we need to get a unit from A to B when ordered to do so. Pathfinding, as said before, enables us to calculate it. We will use a tile-based greedy algorithm: A*. 
+
+### Group Movement
+
+When we move a single unit, we just have to give this entity the order of moving from point A to point B. However, when we have move more than one, this complicates a little bit, since only one of the units will be moving from A to B, the others will start from a different point of origin and should end in a position around B, but not exactly it to avoid overlapping. Nevertheless, bear in mind that all of them will be receiving the same instruction!
+
+So a simple approach to group momevemnt is to select all the entities and then calculate how to get from A to B for the first one in the list. The others, however, will take into account that this spot has already been taken and will get as their destiny a surrounding tile, if walkable. And like this from this unit onwards. This will be done using pathfinding. This will keep the group together, with the same destination, but without overlaps in the end so the player can continue treating them as individuals.
 
 
 ***
